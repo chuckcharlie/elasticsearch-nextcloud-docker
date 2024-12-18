@@ -1,3 +1,12 @@
+# Fork info
+This was forked from https://github.com/R0Wi/elasticsearch-nextcloud-docker
+
+This fork provides two things... 1) An ARM version and 2) The latest Elasticache version
+
+I use this primarily for my NextCloud fulltextsearch_elasticsearch app.
+
+Docker image is hosted here: https://hub.docker.com/repository/docker/chuckcharlie/elasticsearch-nextcloud-docker-multiarch
+
 # elasticsearch-nextcloud-docker
 A docker container hosting elasticsearch with ingest-attachment plugin enabled (compatible with NC fulltext search)
 
