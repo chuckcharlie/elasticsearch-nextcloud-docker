@@ -1,6 +1,8 @@
 ARG ELASTIC_IMAGE=elasticsearch \
-ELASTVERSION
+VERSION
 
-FROM $ELASTIC_IMAGE:$ELASTVERSION
+ENV VERSION=${VERSION}
+
+FROM $ELASTIC_IMAGE:$VERSION
 
 RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch ingest-attachment
