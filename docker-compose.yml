@@ -1,9 +1,6 @@
-version: '2.2'
 services:
   elasticsearch:
-    # DOCKER_TAG will be provided by the .env-file
-    image: r0wi/elasticsearch-nextcloud-docker:${DOCKER_TAG}
-    env_file: .env
+    image: chuckcharlie/elasticsearch-nextcloud-docker-multiarch:latest
     container_name: elasticsearch_nc
     restart: always
     environment:
@@ -12,7 +9,7 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - discovery.type=single-node
       # Disable authentication and ssl completely
-      - xpack.security.enabled=false
+      # - xpack.security.enabled=false
       # Use this to enable Basic Authentication:
       # - xpack.security.enabled=true
       # - xpack.security.http.ssl.enabled=false
